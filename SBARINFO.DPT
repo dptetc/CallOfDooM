@@ -1,0 +1,33 @@
+Height 0;
+MonospaceFonts True, "0";
+
+StatusBar FullScreen, FullScreenOffsets, ForceScaled
+{
+	DrawImage "SBOHEALT", 52, -16;
+	DrawNumber 3, HUDFONT_DOOM, Untranslated, Health, 48, -16;
+	DrawImage "SBOARMOR", -20, -16;
+	DrawNumber 3, HUDFONT_DOOM, Untranslated, Armor, -24, -16;
+	UsesAmmo
+	{
+		DrawImage "SBOEMPTY", -88, -16;
+	}
+	WeaponAmmo Energy
+	{
+		DrawImage "SBOAMMO5", -88, -16;
+	}
+	WeaponAmmo HandGrenadeAmmo
+	{
+		DrawImage "SBOAMMO5", -88, -16;
+		/*IsSelected HandGrenade
+		{
+			DrawBar "GRENFULL", "GRENNULL", Ammo ThrowPower, horizontal, -184, -16;
+		}*/
+	}
+	DrawNumber 3, HUDFONT_DOOM, Untranslated, Ammo1, -92, -16;
+	DrawKeyBar 3, Horizontal, 8, 8, -24, 0;
+	GameMode Deathmatch
+	{
+		DrawImage "SBOFRAGS", -20, 2;
+		DrawNumber 3, HUDFONT_DOOM, Untranslated, Frags, -24, 2;
+	}
+}

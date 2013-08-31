@@ -1,0 +1,23 @@
+/* %COPYRIGHTS_BASE64_BASE16_MD5_SHA1%=RGFydFBvd2VyIFRlYW0= */
+#include "INCLUDE/GORE.DPT"
+#include "INCLUDE/ITEMS.DPT"
+#include "INCLUDE/WEAPONS.DPT"
+#include "INCLUDE/PLAYERS.DPT"
+#include "INCLUDE/ARMY.DPT"
+
+//PLACEHOLDER
+Actor Chainsaw1 : Energy replaces Chainsaw {}
+Actor Pistol1 : Energy replaces Pistol {}
+Actor Shotgun1 : Energy replaces Shotgun {}
+Actor SuperShotgun1 : Energy replaces SuperShotgun {}
+Actor Chaingun1 : Energy replaces Chaingun {}
+Actor RocketLauncher1 : Energy replaces RocketLauncher {}
+Actor PlasmaRifle1 : Energy replaces PlasmaRifle {}
+Actor BFG90001 : Energy replaces BFG9000 {}
+Actor Shell1 : Energy replaces Shell {}
+Actor ShellBox1 : Energy replaces ShellBox {}
+Actor RocketAmmo1 : Energy replaces RocketAmmo {}
+Actor RocketBox1 : Energy replaces RocketBox {}
+Actor Cell1 : Energy replaces Cell {}
+ACTOR Clip1 : Energy replaces Clip {}
+ACTOR ClipBox : Energy/*Box*/ replaces Clip {}

@@ -1,0 +1,72 @@
+CONFONT
+{
+	//ÝÒÎ ÍÀØÀ ÒÎ×ÊÀ
+	. stcfn180
+	//ÍÈÆÍÈÅ
+	à stcfn192
+	á stcfn193
+	â stcfn194
+	ã stcfn195
+	ä stcfn196
+	å stcfn197
+	æ stcfn198
+	ç stcfn199
+	è stcfn200
+	é stcfn201
+	ê stcfn202
+	ë stcfn203
+	ì stcfn204
+	í stcfn205
+	î stcfn206
+	ï stcfn207
+	ð stcfn208
+	ñ stcfn209
+	ò stcfn210
+	ó stcfn211
+	ô stcfn212
+	õ stcfn213
+	ö stcfn214
+	÷ stcfn215
+	ø stcfn216
+	ù stcfn217
+	ú stcfn218
+	û stcfn219
+	ü stcfn220
+	ý stcfn221
+	þ stcfn222
+	ÿ stcfn223
+	//ÇÀÃËÀÂÍÛÅ
+	À stcfn224
+	Á stcfn225
+	Â stcfn226
+	Ã stcfn227
+	Ä stcfn228
+	Å stcfn229
+	Æ stcfn230
+	Ç stcfn231
+	È stcfn232
+	É stcfn233
+	Ê stcfn234
+	Ë stcfn235
+	Ì stcfn236
+	Í stcfn237
+	Î stcfn238
+	Ï stcfn239
+	Ð stcfn240
+	Ñ stcfn241
+	Ò stcfn242
+	Ó stcfn243
+	Ô stcfn244
+	Õ stcfn245
+	Ö stcfn246
+	× stcfn247
+	Ø stcfn248
+	Ù stcfn249
+	Ú stcfn250
+	Û stcfn251
+	Ü stcfn252
+	Ý stcfn253
+	Þ stcfn254
+	ß stcfn255
+	NOTRANSLATION 8
+}

@@ -1,0 +1,44 @@
+gameinfo
+{
+    titlepage = "CODTITLE"
+    creditpage = "DPTCRED"
+    titlemusic = "CODTITLE"
+    titletime = 5
+    pagetime = 5
+    intermissionmusic = "CODINTER"
+    intermissioncounter = true
+}
+
+clearepisodes
+
+episode MAP01
+{
+	name = "Hell On Earth"
+}
+
+episode COOP01
+{
+	name = "Cooperative Maps"
+}
+
+episode DM01
+{
+	name = "Deathmatch Maps"
+}
+
+defaultmap
+{
+sky1 = "RSKY1"
+}
+
+map COOP01 "Military Nightmare"
+{
+music = "D_UACMN"
+next = "COOP02"
+}
+
+map DM01 "Demise"
+{
+music = "D_DEMISE"
+next = "DM02"
+}

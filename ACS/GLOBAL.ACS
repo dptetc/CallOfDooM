@@ -1,0 +1,99 @@
+#include "zcommon.acs"
+#library "GLOBAL"
+
+function int abs (int x)
+{
+    if (x < 0)
+        return -x;
+
+    return x;
+}
+
+// Returns TID of landmine.
+function int MineID(int number)
+{
+	if (PlayerNumber() == -1)
+		return 15295; // Tag without any actors.
+	return 1000 + PlayerNumber() + number * 100;
+}
+
+// Called by landmines.
+// This scripts manages landmine limit per player.
+script 777 (int arg)
+{
+	if (arg == 10) // Landmine spawned.
+	{
+		Thing_ChangeTid(0, 777);
+		SetActivatorToTarget(0);
+
+		if (!ThingCount(T_NONE, MineID(1)))
+			Thing_ChangeTid(777, MineID(1));
+		else if (!ThingCount(T_NONE, MineID(2)))
+			Thing_ChangeTid(777, MineID(2));
+		else if (!ThingCount(T_NONE, MineID(3)))
+			Thing_ChangeTid(777, MineID(3));
+		else if (!ThingCount(T_NONE, MineID(4)))
+			Thing_ChangeTid(777, MineID(4));
+		else // No more landmines. Remove first one
+		{
+			Thing_Remove(MineID(1));
+			Thing_ChangeTid(MineID(2), MineID(1));
+			Thing_ChangeTid(MineID(3), MineID(2));
+			Thing_ChangeTid(MineID(4), MineID(3));
+			Thing_ChangeTid(777, MineID(4));
+		}
+	}
+	else if (arg == 11) // Landmine died.
+	{
+		int tid = ActivatorTid();
+		SetActivatorToTarget(0);
+
+		if (tid == MineID(1))
+			Thing_ChangeTid(MineID(2), MineID(1));
+		if (tid <= MineID(2))
+			Thing_ChangeTid(MineID(3), MineID(2));
+		if (tid <= MineID(3))
+			Thing_ChangeTid(MineID(4), MineID(3));
+	}
+}
+
+int PlNumArray[99]={"CODPN1","CODPN2","CODPN3","CODPN4","CODPN5","CODPN6","CODPN7","CODPN8","CODPN9","CODPN10","CODPN11","CODPN12","CODPN13","CODPN14","CODPN15","CODPN16","CODPN17","CODPN18","CODPN19","CODPN20",
+					"CODPN21","CODPN22","CODPN23","CODPN24","CODPN25","CODPN26","CODPN27","CODPN28","CODPN29","CODPN30","CODPN31","CODPN32","CODPN33","CODPN34","CODPN35","CODPN36","CODPN37","CODPN38","CODPN39","CODPN40",
+					"CODPN41","CODPN42","CODPN43","CODPN44","CODPN45","CODPN46","CODPN47","CODPN48","CODPN49","CODPN50","CODPN51","CODPN52","CODPN53","CODPN54","CODPN55","CODPN56","CODPN57","CODPN58","CODPN59","CODPN60",
+					"CODPN61","CODPN62","CODPN63","CODPN64","CODPN65","CODPN66","CODPN67","CODPN68","CODPN69","CODPN70","CODPN71","CODPN72","CODPN73","CODPN74","CODPN75","CODPN76","CODPN77","CODPN78","CODPN79","CODPN80",
+					"CODPN81","CODPN82","CODPN83","CODPN84","CODPN85","CODPN86","CODPN87","CODPN88","CODPN89","CODPN90","CODPN91","CODPN92","CODPN93","CODPN94","CODPN95","CODPN96","CODPN97","CODPN98","CODPN99"};
+
+script 228 ENTER NET
+{
+	ActivatorSound("misc/connect",255);
+	SetActorProperty(0,APROP_Species,PlNumArray[PlayerNumber()]);
+}
+
+int num_turrets = 0;
+
+// Called by wrench to limit max. turrets.
+script 800 (void)
+{
+	if (num_turrets == 3)
+	{
+		SetHudSize(640, 480, 0);
+		SetFont("BIGFONT");
+		HudMessage(s:"Only 3 turrets max"; HUDMSG_FADEOUT, 10, CR_RED, 320.0, 240.0, 1.0);
+		SetResultValue(255);
+		terminate;
+	}
+
+	SetResultValue(0);
+}
+
+// Called by spawned turrets.
+script 801 (void)
+{
+	num_turrets++;
+}
+
+// Called by turrets on death.
+script 802 (void)
+{
+	num_turrets--;
+}
