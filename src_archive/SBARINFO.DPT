@@ -1,0 +1,79 @@
+Height 0;
+MonospaceFonts True, "0";
+
+StatusBar FullScreen, FullScreenOffsets, ForceScaled
+{
+	DrawImage "SBOHEALT", 52, -16;
+	DrawNumber 3, HUDFONT_DOOM, Untranslated, Health, 48, -16;
+	DrawImage "SBOARMOR", -20, -16;
+	DrawNumber 3, HUDFONT_DOOM, Untranslated, Armor, -24, -16;
+	UsesAmmo
+	{
+		DrawImage "SBOEMPTY", -88, -16;
+	}
+	WeaponAmmo AmmoCount
+	{
+		DrawImage "SBOAMMO5", -88, -16;
+	}
+	IsSelected HandGrenade
+	{
+		InInventory ThrowPower
+		{
+			DrawImage "SBOAMMO5", -88, -16;
+			DrawImage "THROW", -32+center, -31;
+			DrawBar "GRENFULL", "GRENNULL", Ammo ThrowPower, horizontal, -32+center, -16;
+		}
+	}
+		IsSelected Glock
+	{
+		InInventory GlockCheck
+		{
+			DrawImage "SBOAMMO5", -150, -16;
+			DrawNumber 3, HUDFONT_DOOM, Untranslated, GlockCheck, -150, -16;
+		}
+	}
+		IsSelected Cal45
+	{
+		InInventory Cal45Check
+		{
+			DrawImage "SBOAMMO5", -150, -16;
+			DrawNumber 3, HUDFONT_DOOM, Untranslated, Cal45Check, -150, -16;
+		}
+	}
+		IsSelected M16
+	{
+		InInventory RifleCheck
+		{
+			DrawImage "SBOAMMO5", -150, -16;
+			DrawNumber 3, HUDFONT_DOOM, Untranslated, RifleCheck, -150, -16;
+		}
+	}
+		IsSelected AK47
+	{
+		InInventory RifleCheck
+		{
+			DrawImage "SBOAMMO5", -150, -16;
+			DrawNumber 3, HUDFONT_DOOM, Untranslated, RifleCheck, -150, -16;
+		}
+	}
+		IsSelected MP40
+	{
+		InInventory MP40Check
+		{
+			DrawImage "SBOAMMO5", -150, -16;
+			DrawNumber 3, HUDFONT_DOOM, Untranslated, MP40Check, -150, -16;
+		}
+	}
+	DrawNumber 3, HUDFONT_DOOM, Untranslated, Ammo1, -92, -16;
+	DrawKeyBar 3, Horizontal, 8, 8, -24, 0;
+	GameMode Deathmatch
+	{
+		DrawImage "SBOFRAGS", -20, 2;
+		DrawNumber 3, HUDFONT_DOOM, Untranslated, Frags, -24, 2;
+	}
+}
+
+StatusBar InventoryFullScreen, FullScreenOffsets
+{
+	DrawInventorybar Doom, Translucent, 7, INDEXFONT, -106+center, -31;
+}

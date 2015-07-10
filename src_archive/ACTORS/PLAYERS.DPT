@@ -1,0 +1,294 @@
+ACTOR M16Assault : DoomPlayer
+{
+	Speed 1
+	Health 100
+	Radius 16
+	Height 56
+	Mass 100
+	PainChance 255
+	Player.ColorRange 112, 127
+	Player.DisplayName "M16 Assault"
+	Player.StartItem "M16"
+	Player.StartItem "Glock"
+	Player.StartItem "Knife"
+	Player.StartItem "HandGrenade"
+	Player.StartItem "AmmoCount", 200
+	Player.StartItem "HandGrenadeAmmo", 3
+	States
+	{
+	Spawn:
+		PCBN A -1
+		Loop
+	See:
+		PCBN A 8
+		PCBN A 0 
+		PCBN B 8
+		PCBN C 8
+		PCBN A 0 
+		PCBN D 8
+		Loop
+	Missile:
+		PCBN E 12 
+		Goto Spawn
+	Melee:
+		PCBN F 6 BRIGHT
+		Goto Missile
+	Pain:
+		PCBN G 4 
+		PCBN G 4 A_Pain
+		Goto Spawn
+	XDeath:
+	Death:
+		PCBN H 10
+		PCBN I 10 A_PlayerScream
+		PCBN J 10 A_NoBlocking
+		PCBN KLM 10
+		PCBN N -1
+		Stop
+	}
+}
+ACTOR AK47Assault : Doomplayer
+{
+	Speed 1
+	Health 100
+	Radius 16
+	Height 56
+	Mass 100
+	PainChance 255
+	Player.ColorRange 112, 127
+	Player.DisplayName "AK47 Assault"
+	Player.StartItem "AK47"
+	Player.StartItem "Glock"
+	Player.StartItem "Knife"
+	Player.StartItem "HandGrenade"
+	Player.StartItem "AmmoCount", 200
+	Player.StartItem "HandGrenadeAmmo", 3
+	States
+	{
+	Spawn:
+		PCBN A -1
+		Loop
+	See:
+		PCBN A 8
+		PCBN A 0 
+		PCBN B 8
+		PCBN C 8
+		PCBN A 0 
+		PCBN D 8
+		Loop
+	Missile:
+		PCBN E 12 
+		Goto Spawn
+	Melee:
+		PCBN F 6 BRIGHT
+		Goto Missile
+	Pain:
+		PCBN G 4 
+		PCBN G 4 A_Pain
+		Goto Spawn
+	XDeath:
+	Death:
+		PCBN H 10
+		PCBN I 10 A_PlayerScream
+		PCBN J 10 A_NoBlocking
+		PCBN KLM 10
+		PCBN N -1
+		Stop
+	}
+}
+ACTOR Elite : DoomPlayer
+{
+	Speed 1.25
+	Health 100
+	Radius 16
+	Height 56
+	Mass 100
+	PainChance 255
+	BloodColor Blue
+	Player.ColorRange 112, 127
+	Player.DisplayName "Elite"
+	Player.StartItem "MP40"
+	Player.StartItem "Sawedoff"
+	Player.StartItem "Knife"
+	Player.StartItem "HandGrenade"
+	Player.StartItem "AmmoCount", 200
+	Player.StartItem "HandGrenadeAmmo", 3
+	States
+	{
+	Spawn:
+		1337 A -1
+		Loop
+	See:
+		1337 A 8
+		1337 A 0 
+		1337 B 8
+		1337 C 8
+		1337 A 0 
+		1337 D 8
+		Loop
+	Missile:
+		1337 E 12 
+		Goto Spawn
+	Melee:
+		1337 F 6 BRIGHT
+		Goto Missile
+	Pain:
+		1337 G 4 
+		1337 G 4 A_Pain
+		Goto Spawn
+	XDeath:
+	Death:
+		1337 H 10
+		1337 I 10 A_PlayerScream
+		1337 J 10 A_NoBlocking
+		1337 KLM 10
+		1337 N -1
+		Stop
+	}
+}
+ACTOR Ghost : DoomPlayer
+{
+	Speed 2
+	Health 25
+	Player.maxhealth 25
+	Radius 16
+	Height 56
+	Mass 100
+	renderstyle add
+	alpha 0.25
+	PainChance 255
+	Player.MaxHealth 50
+	Player.ColorRange 112, 127
+	Player.DisplayName "Ghost"
+	Player.StartItem "Ghost_Knife"
+	+GHOST
+	States
+	{
+	Spawn:
+		PKNI A -1
+		Loop
+	See:
+		PKNI A 8
+		PKNI B 8
+		PKNI C 8
+		PKNI D 8
+		Loop
+	Missile:
+		PKNI E 12 
+		Goto Spawn
+	Melee:
+		PKNI F 6 BRIGHT
+		Goto Missile
+	Pain:
+		PKNI G 4 
+		PKNI G 4 A_Pain
+		Goto Spawn
+	XDeath:
+	Death:
+		TFOG A 2
+		TFOG B 2
+		TFOG C 2 A_NoBlocking
+		TFOG DEFGHIJ 2
+		NULL A -1
+		Stop
+	}
+}
+ACTOR Heavy : DoomPlayer
+{
+	Speed 0.5
+	Health 150
+	Player.maxhealth 150
+	Radius 16
+	Height 56
+	Mass 100
+	PainChance 255
+	Player.MaxHealth 250
+	Player.ColorRange 112, 127
+	Player.DisplayName "Heavy"
+	Player.StartItem "Minigun"
+	Player.StartItem "Cal45"
+	Player.StartItem "Knife"
+	Player.StartItem "HandGrenade"
+	Player.StartItem "AmmoCount", 200
+	Player.StartItem "HandGrenadeAmmo", 3
+	States
+	{
+	Spawn:
+		PSUC A -1
+		Loop
+	See:
+		PSUC A 8
+		PSUC A 0 
+		PSUC B 8
+		PSUC C 8
+		PSUC A 0 
+		PSUC D 8
+		Loop
+	Missile:
+		PSUC E 12 
+		Goto Spawn
+	Melee:
+		PSUC F 6 BRIGHT
+		Goto Missile
+	Pain:
+		PSUC G 4 
+		PSUC G 4 A_Pain
+		Goto Spawn
+	XDeath:
+	Death:
+		PSUC H 10
+		PSUC I 10 A_PlayerScream
+		PSUC J 10 A_NoBlocking
+		PSUC KLM 10
+		PSUC N -1
+		Stop
+	}
+}
+ACTOR Sniper : DoomPlayer
+{
+	Speed 1
+	Health 50
+	Player.maxhealth 50
+	Radius 16
+	Height 56
+	Mass 100
+	PainChance 255
+	Player.MaxHealth 75
+	Player.ColorRange 112, 127
+	Player.DisplayName "Sniper"
+	Player.StartItem "M40"
+	Player.StartItem "Knife"
+	Player.StartItem "AmmoCount", 200
+	States
+	{
+	Spawn:
+		PSNP A -1
+		Loop
+	See:
+		PSNP A 8
+		PSNP A 0 
+		PSNP B 8
+		PSNP C 8
+		PSNP A 0 
+		PSNP D 8
+		Loop
+	Missile:
+		PSNP E 12 
+		Goto Spawn
+	Melee:
+		PSNP F 6 BRIGHT
+		Goto Missile
+	Pain:
+		PSNP G 4 
+		PSNP G 4 A_Pain
+		Goto Spawn
+	XDeath:
+	Death:
+		PSNP H 10
+		PSNP I 10 A_PlayerScream
+		PSNP J 10 A_NoBlocking
+		PSNP KLM 10
+		PSNP N -1
+		Stop
+	}
+}

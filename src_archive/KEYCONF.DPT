@@ -1,0 +1,18 @@
+WeaponSection "COD"
+SetSlot 1 M16 MP40 Minigun M40 AK47
+SetSlot 2 Glock Cal45 Sawedoff
+SetSlot 3 Knife Ghost_Knife
+SetSlot 4 HandGrenade
+
+ClearPlayerClasses
+AddPlayerClass M16Assault
+AddPlayerClass AK47Assault
+AddPlayerClass Elite
+AddPlayerClass Ghost
+AddPlayerClass Heavy
+AddPlayerClass Sniper
+
+AddKeySection "Advanced Key Combos" COD
+AddMenuKey "Reload" COD_RELOAD
+Alias COD_RELOAD "puke 439"
+DefaultBind R COD_RELOAD

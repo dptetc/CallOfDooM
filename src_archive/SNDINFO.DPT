@@ -1,0 +1,50 @@
+M16/Fire						DSM16FIR
+M16/in							DSM16IN
+M16/out							DSM16OUT
+M16/cock						DSM16CKC
+UZI/Fire						DSUZIFIR
+Knife/HitThing					DSKNIFE
+Knife/HitWall					DSKNIFE3
+Knife/Attack					DSKNIFE2
+AUTOSHOTGUN/Fire				AUTOFIRE
+Sawedoff/Fire					DSSAWFIR
+Sawedoff/open					DSSAWOPN
+Sawedoff/slide					DSSAWSLD
+Sawedoff/close					DSSAWCLS
+minigun/fire1                	DSMINF1
+minigun/fire2                	DSMINF2
+minigun/fire3                	DSMINF3				
+$random Minigun/Fire
+{ 
+minigun/fire1
+minigun/fire2
+minigun/fire3
+}
+Glock/Fire 						GLOCKFIR
+Glock/in 						GLCKIN
+Glock/out 						GLCKOUT
+Glock/cock 						GLCKCCK
+TT/Fire							DSTTFIRE
+TT/in							CL45IN
+TT/out							CL45OUT
+TT/cock							CL45CCK
+M40Rifle/Fire 					M40FIR1
+M40Rifle/Scope 					M40FIR2
+M40Rifle/Bolt1					M40FIR3
+M40Rifle/Bolt2 					M40FIR4
+Grenade/PullPin					DSGRPIN
+Grenade/Toss					DSGRTOSS
+Grenade/Bounce					DSGRDROP
+Grenade/Explode					DSGRBOOM
+AK47/Fire						AK47FIRE
+AK47/in							AK47IN
+AK47/out						AK47OUT
+AK47/cock						AK47COCK
+MP40/Fire						DSMP40FR
+MP40/in							DSMP40IN
+MP40/out						DSMP40OU
+MP40/cock						DSMP40CC
+$limit M40Rifle/Fire			0
+$limit M40Rifle/Scope			0
+$limit M40Rifle/Bolt1			0
+$limit M40Rifle/Bolt2			0

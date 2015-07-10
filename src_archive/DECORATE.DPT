@@ -1,0 +1,18 @@
+#include "ACTORS/WEAPONS.DPT"
+#include "ACTORS/PLAYERS.DPT"
+
+ACTOR Chainsaw1 : AmmoCount replaces Chainsaw {}
+ACTOR Pistol1 : AmmoCount replaces Pistol {}
+ACTOR Shotgun1 : AmmoCount replaces Shotgun {}
+ACTOR SuperShotgun1 : AmmoCount replaces SuperShotgun {}
+ACTOR Chaingun1 : AmmoCount replaces Chaingun {}
+ACTOR RocketLauncher1 : AmmoCount replaces RocketLauncher {}
+ACTOR PlasmaRifle1 : AmmoCount replaces PlasmaRifle {}
+ACTOR BFG90001 : AmmoCount replaces BFG9000 {}
+ACTOR Shell1 : AmmoCount replaces Shell {}
+ACTOR ShellBox1 : AmmoCount replaces ShellBox {}
+ACTOR RocketAmmo1 : AmmoCount replaces RocketAmmo {}
+ACTOR RocketBox1 : AmmoCount replaces RocketBox {}
+ACTOR Cell1 : AmmoCount replaces Cell {}
+ACTOR Clip1 : AmmoCount replaces Clip {}
+ACTOR ClipBox1 : AmmoCount replaces ClipBox {}
